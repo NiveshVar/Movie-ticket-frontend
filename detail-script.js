@@ -11,7 +11,7 @@ window.onload = async () => {
 async function fetchMovieDetails(movieId) {
   try {
     const response = await fetch(
-      `http://localhost:8000/movie/${movieId}`
+      `https://movie-ticket-backend-fwg9.onrender.com/movie/${movieId}`
     );
     const movie = await response.json();
 
@@ -117,7 +117,7 @@ document.getElementById("submitBooking").addEventListener("click", async () => {
   const phoneNumber = document.getElementById("phoneNumber").value;
 
   try {
-    const response = await fetch("http://localhost:8000/movie/book-movie", {
+    const response = await fetch("https://movie-ticket-backend-fwg9.onrender.com/movie/book-movie", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
