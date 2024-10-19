@@ -4,7 +4,7 @@
 
 async function fetchMovies() {
     try {
-      const response = await fetch("http://localhost:8000/movie/get-movies");
+      const response = await fetch("https://movie-ticket-backend-fwg9.onrender.com/movie/get-movies");
       const movies = await response.json();
       const movieCardsContainer = document.getElementById("movieCards");
       movieCardsContainer.innerHTML = "";
